@@ -54,45 +54,82 @@ List in Scheme Represented as prime factorization and represented as number. Com
 ;;;; As the last example makes clear, lists are not sets, even if one ignores the ordering of a list's elements:
 ;;;; lists can have multiple occurrences of the same element.
 
+
+
 ;; One can decode (num s) to answer questions about s.  For example, if s is (5 2 8 2), we can use (num s) to see that
 ;; the index 2 element of s is 8 by computing that the highest power of the 2nd prime (namely, 5) which divides (num s)
 ;; is 8.  
 
 ;; This package uses this idea and includes the following functions for lisp-R5RS scheme
  for list manipulation.
+ 
+ 
+ 
+ 
 ;;; -- a function myequal? which inputs numbers n representing a list s and m representing a list t, and which checks whether s and
 ;;;    t are the same list (and returns #t  only if s and t are the same lists)
-;
+
+
+
+
+
 ;;; -- a function head which inputs a number n which represents a list s and which returns the number in the
 ;;;    first position of s, that is, the head of s
-;
+
+
+
 ;;; -- more generally, a function ref which inputs a number n representing a list s and which returns the number
 ;;;    in the kth position of s
-;
+
+
+
 ;;; -- a function tail which inputs a number n which represents a list s and which returns the number representing the tail
 ;;;    of s, that is, the list obtained from s by removing its first element
-;
+
+
+
+
 ;;; -- a function insert-at-head which inputs a number n representing a list s and a second number p, and which returns the number
 ;;;    representing the list obtained by inserting p at the head of the list s 
-;
+
+
+
+
 ;;; -- a function len which inputs a number n which represents a list s and which returns the number of elements of s
-;
+
+
+
+
 ;;; -- a function snoc which inputs a number n which represents a list s and a second number q, and which returns the number
 ;;;    representing the list obtained by inserting q at the end of the list s
-;
+
+
+
 ;;; -- a function last which inputs a number n which represents a non-empty list s and which returns the rightmost element of s
-;
+
+
+
+
 ;;; -- a function insert-at which inputs a number n representing a list s, a second number x, and a third number y and which returns
 ;;;    the number representing the list obtained by inserting x in the yth position of s.  You will need preconditions
 ;;;    to ensure that the number y makes sense as a position in s
-;
+
+
+
+
 ;;; -- a function myappend which inputs numbers m and n representing lists s and t, respectively, and which returns the number
 ;;;    representing the list formed by appending s and t
-;
+
+
+
 ;;; -- a function myreverse which inputs a number representing a list s and which outputs the number representing the reverse
 ;;;    of s
-;
+
+
+
 ;;; -- a function palin? which inputs a number representing a list s and which determines whether s is a palindrome
-;
+
+
+
 ;;; -- a function sort which inputs a number representing a list s and which outputs the number representing the list
 ;;;    formed by sorting (smallest to largest) the elements of s
